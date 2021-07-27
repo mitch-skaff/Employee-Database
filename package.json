@@ -1,0 +1,24 @@
+{
+  "name": "Employee-Database",
+  "version": "1.0.0",
+  "description": "application to store employee information",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mitch-skaff/Employee-Database.git"
+  },
+  "keywords": [],
+  "author": "Mitchel Skaff",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mitch-skaff/Employee-Database/issues"
+  },
+  "homepage": "https://github.com/mitch-skaff/Employee-Database#readme",
+  "dependencies": {
+    "inquirer": "^8.1.2",
+    "mysql2": "^2.2.5"
+  }
+}
