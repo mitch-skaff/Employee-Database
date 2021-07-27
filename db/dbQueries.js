@@ -3,7 +3,13 @@ const connection = require('./connection');
 class DB {
     constructor(connection) {
         this.connection = connection;
-    }
+    };
+
+    findAllDepartments () {
+        return this.connection.query(
+            "SELECT * FROM department"
+        )
+    };
 
     findAllEmployees () {
         return this.connection.query(
@@ -11,7 +17,29 @@ class DB {
         )
     };
 
-    
+    findAllRoles () {
+        return this.connection.query(
+            "Select title as RoleTitle, salary as Salary, department.name as Department FROM role LEFT JOIN department on role.department_id = department.id"
+        )
+    };
+
+    insertRole () {
+        return this.connection.query(
+            "INSERT INTO role SET ?"
+        )
+    };
+
+    insertDepartment () {
+        return this.connection.query(
+            "INSERT INTO department SET ?"
+        )
+    };
+
+    insertEmployee () {
+        return this.connection.query(
+            "INSERT INTO employee SET ?"
+        )
+    };
 };
 
 
