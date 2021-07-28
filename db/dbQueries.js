@@ -22,24 +22,6 @@ class DB {
             "Select title as RoleTitle, salary as Salary, department.name as Department FROM role LEFT JOIN department on role.department_id = department.id"
         )
     };
-
-    insertRole () {
-        return this.connection.query(
-            "INSERT INTO role SET ?"
-        )
-    };
-
-    insertDepartment () {
-        return this.connection.query(
-            "INSERT INTO department SET ?"
-        )
-    };
-
-    insertEmployee () {
-        return this.connection.query(
-            "INSERT INTO employee SET ?"
-        )
-    };
 };
 
 
