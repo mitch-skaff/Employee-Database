@@ -95,7 +95,7 @@ function addRole() {
     ])
         .then(answer => {
 
-            connection.query("INSERT INTO role SET ? ",
+            connection.query("INSERT INTO role SET ?",
                 {
                     title: answer.title,
                     salary: answer.salary,
@@ -158,7 +158,7 @@ function addDepartment() {
     ])
         .then(answers => {
 
-            connection.query("INSERT INTO department SET ? ",
+            connection.query("INSERT INTO department SET ?",
                 {
                     name: answers.name
                 }, (err, res) => {
@@ -213,6 +213,6 @@ function updateEmployeeRole(){
             });
         })
     })
-}
+};
 
 
